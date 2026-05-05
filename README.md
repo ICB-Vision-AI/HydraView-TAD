@@ -1,6 +1,6 @@
 # HydraView
 
-This is the repository that contains source code for the [HydraView website](https://github.com/yanik-porto/HydraView.github.io).
+This is the repository that contains source code for the [HydraView website](https:/yanik-porto.github.io/HydraView).
 
 
 # Website License
