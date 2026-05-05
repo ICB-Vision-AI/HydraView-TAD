@@ -116,9 +116,9 @@
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <!-- <div class="publication-body"> -->
-      <img src="./static/images/overview.svg" class="interpolation-svg" alt="Training pipeline."/>
+      <img src="./static/images/overview.svg" class="interpolation-svg" alt="Overview of our method."/>
       <h2 class="subtitle has-text-centered">
-        Overview of our temporal action detection method. For each view, an untrimmed sequence is passed to our spatio-temporal
+        <span class="dnerf">Overview of our temporal action detection method.</span> For each view, an untrimmed sequence is passed to our spatio-temporal
         encoder to generate features for each window of time. These features are then refined by our multi-view and multi-scale
         temporal encoder before being projected to find the beginning and end of each action over time.
       </h2>
@@ -158,9 +158,22 @@ available.
     <!-- Paper Image. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">SWGCN</h2>
+        <h2 class="title is-3">Method</h2>
         <!-- <div class="publication-body"> -->
-        <img src="./static/images/swgcn.svg" class="interpolation-image" alt="Overview of our method." />
+        <img src="./static/images/swgcn.svg" class="interpolation-image" alt="Window feature encoding." />
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">SWGCN.</span> Motion features are learned by small time windows for each viewpoint. The encoder model (SWGCN) is then frozen to extract window features with improved temporal consistency.
+        </h2>
+
+        <img src="./static/images/HydraView.svg" class="interpolation-image" alt="Temporal Encoding with HydraView." />
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Hydraview.</span> Multi-view Multi-Scale Learning for Temporal Encoding with HydraView. HydraView is composed of multiple ViewMamba blocks each responsible of a specific scale in views and time. The ViewMamba block is a 2D convolution followed by a dilation module scaling the input for SS2D. The representation from each ViewMamba block is then processed by a Multi-Scale Fuser to provide the action predictions.
+        </h2>
+
+        <img src="./static/images/ViewScan.svg" class="interpolation-image" alt="Scanning strategies." />
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">ViewScan.</span> Designed bidirectional scanning strategies along both view and temporal dimensions. This scheme shows actions seen from two viewpoints, and final empty cells mean a missing skeleton detection.
+        </h2>
       </div>
     </div>
     <!--/ Paper Image. -->
@@ -168,23 +181,19 @@ available.
     <!-- Paper Image. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">HydraView</h2>
-        <!-- <div class="publication-body"> -->
-        <img src="./static/images/HydraView.svg" class="interpolation-image" alt="Overview of our method." />
+        <h2 class="title is-3">Results</h2>
+        <img src="./static/images/pkummd.png" class="interpolation-image" alt="Results on PKUMMD." />
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">PKUMMD.</span> Results on two sequences from PKUMMDv1 (cross-subject split). Our model effectively scales to long-form sequences (up to 4 minutes) involving a large action vocabulary (51 classes). For visual clarity, we aggregate ``others'' instances into a single category, though they retain their individual class labels for evaluation purposes. The results demonstrate the model's ability to maintain temporal consistency across extended durations.
+        </h2>
+
+        <img src="./static/images/babel_split1.png" class="interpolation-image" alt="Results on BABEL." />
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">BABEL.</span> Results on two sequences from BABEL (split 1). The predictions indicate the classification for each temporal window. Each action instance is correctly labeled. While some Detections exhibit minor temporal shifts at the boundaries, they maintain an Intersection over Union (IoU) exceeding 50%.
+        </h2>
       </div>
     </div>
     <!--/ Paper Image. -->
-
-    <!-- Paper Image. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">View Scan</h2>
-        <!-- <div class="publication-body"> -->
-        <img src="./static/images/ViewScan.svg" class="interpolation-image" alt="Overview of our method." />
-      </div>
-    </div>
-    <!--/ Paper Image. -->
-
   </div>
 </section>
 
