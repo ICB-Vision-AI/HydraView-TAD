@@ -1,4 +1,4 @@
-# HydraView
+# HydraView-TAD
 
 <div align="center">
 <img src='./static/images/overview.png' align="center" width="1280"/> <br>
@@ -7,7 +7,7 @@ Overview of our temporal action detection method with multiple viewpoints. For e
 
 ## Introduction
 
-This is the source code for the [website](https://yanik-porto.github.io/HydraView) of the paper "Improving Viewpoint-Invariance and Temporal Consistency for Action Detection".
+This is the source code for the [website](https://yanik-porto.github.io/HydraView-TAD) of the paper "Improving Viewpoint-Invariance and Temporal Consistency for Action Detection".
 
 The paper is accepted to ICIP 2026.
 
@@ -16,7 +16,7 @@ The paper is accepted to ICIP 2026.
 
 ## Code
 
-The source code of the method described in the paper is [here](https://github.com/yanik-porto/HydraView.git).
+The source code of the method described in the paper is [here](https://github.com/yanik-porto/HydraView-TAD.git).
 
 ## Citation
 If you find this code useful for your research, please cite the paper:
