@@ -22,6 +22,12 @@ The source code of the method described in the paper is [here](https://github.co
 If you find this code useful for your research, please cite the paper:
 
 ```bibtex
+@article{porto2026vitad,
+  title={Improving Viewpoint-Invariance and Temporal Consistency for Action Detection},
+  author={Porto, Martins and Chalumeau, Demonceaux},
+  journal={ICIP},
+  year={2026}
+}
 ```
 
 ## Acknowledgements
